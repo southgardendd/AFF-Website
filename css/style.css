@@ -1,4 +1,6 @@
 body {
+    display: flex;
+    flex-direction: column;
     background-color: #000;
     padding: 0;
     margin: 0;
@@ -192,6 +194,8 @@ header {
     box-sizing: border-box;
   }
 
+/* GREEN UNDERLINE */
+
 a.underline-hover-effect {
     /* color: #fff; */
     text-decoration: none;
@@ -216,6 +220,37 @@ a.underline-hover-effect {
 }
 
   .underline-hover-effect:hover::before {
+    width: 100%;
+    left: 0;
+    right: auto;
+}
+
+/* PURPLE UNDERLINE */
+
+a.underline-hover-effect-purple {
+    /* color: #fff; */
+    text-decoration: none;
+}
+  
+.underline-hover-effect-purple {
+    /* color: #fff; */
+    display: inline-block;
+    padding-bottom: 0.25rem; /* defines the space between text and underline */
+    position: relative;
+}
+  
+.underline-hover-effect-purple::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #dec2fd;
+    transition: width 0.35s ease-out;
+}
+
+  .underline-hover-effect-purple:hover::before {
     width: 100%;
     left: 0;
     right: auto;
@@ -258,7 +293,7 @@ a.underline-hover-effect {
     flex-direction: column;
     justify-content: space-between;
     background: #ffffff;
-    width: 700px;
+    width: 600px;
     height: 200px;
     color: #000;
     border-radius: 15px;
@@ -270,7 +305,7 @@ a.underline-hover-effect {
     flex-direction: column;
     justify-content: space-between;
     background: #212121;
-    width: 700px;
+    width: 600px;
     height: 200px;
     color: #d1d1d1;
     border-radius: 15px;
@@ -280,7 +315,7 @@ a.underline-hover-effect {
 .smallBoxesContainer {
     display: flex;
     gap: 17.5px;
-    width: 700px;
+    width: 600px;
 }
 
 .serviceSmallBoxWhite {
@@ -475,7 +510,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 50px;
+    gap: 25px;
     padding: 100px;
     color: #fff;
 }
@@ -489,7 +524,7 @@ footer {
 .inNumbersHeader {
     font-family: 'Clash Display', sans-serif;
     font-size: 30px;
-    width: 650px;
+    width: 600px;
     font-weight: 500;
 }
 
@@ -546,7 +581,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 25px;
     padding: 100px;
 }
 
@@ -555,7 +590,7 @@ footer {
     flex-direction: column;
     gap: 20px;
     background: #212121;
-    width: 700px;
+    width: 600px;
     /* height: 350px; */
     height: min-content;
     color: #d1d1d1;
@@ -646,6 +681,7 @@ footer {
 }
 
 .teamMemberPhotoAtr {
+    overflow:hidden;
     width: 250px;
     border-radius: 180px;
 }
